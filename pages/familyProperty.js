@@ -24,15 +24,15 @@ const handleFormSubmit = e => {
     
     const price = e.target.price.value;
     const priceFor = e.target.priceFor.value;
-    const gashBill = e.target.gashBill.value;
-    const waterBill = e.target.waterBill.value;
-    const electricityBill = e.target.electricityBill.value;
-    const liftBill = e.target.liftBill.value;
-    const securityBill = e.target.securityBill.value;
+    // const gashBill = e.target.gashBill.value;
+    // const waterBill = e.target.waterBill.value;
+    // const electricityBill = e.target.electricityBill.value;
+    // const liftBill = e.target.liftBill.value;
+    // const securityBill = e.target.securityBill.value;
 
 
 
-    console.log(district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, extraRoom, price, priceFor, gashBill, waterBill, electricityBill, liftBill, securityBill);
+    console.log(district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, extraRoom, price, priceFor);
 
 
 
@@ -156,7 +156,7 @@ const handleFormSubmit = e => {
 
 
 
-        <div className="flex font-semibold text-xl mt-10">
+        {/* <div className="flex font-semibold text-xl mt-10">
             <BsSignIntersectionFill className="mt-1 mx-2" />
             <p> Price included with</p>
           </div>
@@ -185,7 +185,7 @@ const handleFormSubmit = e => {
             <input name="securityBill" type="checkbox" className="checkbox" />
           </div>
           </div>
-        </div>
+        </div> */}
 
         <button className="btn bg-sky-400 hover:bg-sky-500 mt-5">Submit</button>
       </form>
