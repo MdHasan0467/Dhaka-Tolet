@@ -3,7 +3,7 @@ import { BsFillTagsFill, BsReverseLayoutTextSidebarReverse, BsSignIntersectionFi
 
 const bachelorProperty = ({ districts }) => {
 
-    const handleFormSubmit = e => {
+    const handleFormSubmit = async (e) => {
         e.preventDefault();
         const district = e.target.district.value;
         const localArea = e.target.localArea.value;
@@ -29,10 +29,27 @@ const bachelorProperty = ({ districts }) => {
         // const securityBill = e.target.securityBill.value;
     
     
+
+        const bachelorProperty = {
+          district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, extraRoom, price, priceFor
+        }
     
-        console.log(district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, extraRoom, price, priceFor);
+        console.log(bachelorProperty);
     
-    
+        try{
+          const res = await fetch('/api/bachelorPropertyServer', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(bachelorProperty)
+          })
+          const data = await res.json();
+          console.log(data);
+         }
+         catch(err) {
+          console.log(err);
+         }
+         finally {
+         }
     
     }
     return (

@@ -5,7 +5,7 @@ const familyProperty = ({ districts }) => {
 //   console.log(districts.places);
 
 
-const handleFormSubmit = e => {
+const handleFormSubmit = async (e) => {
     e.preventDefault();
     const district = e.target.district.value;
     const localArea = e.target.localArea.value;
@@ -32,8 +32,27 @@ const handleFormSubmit = e => {
 
 
 
-    console.log(district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, extraRoom, price, priceFor);
+    
+    const familyProperties = {
+      district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, extraRoom, price, priceFor
+    }
+    
+    console.log(familyProperties);
 
+    try{
+      const res = await fetch('/api/familyPropertyServer', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(familyProperties)
+      })
+      const data = await res.json();
+      console.log(data);
+     }
+     catch(err) {
+      console.log(err);
+     }
+     finally {
+     }
 
 
 }

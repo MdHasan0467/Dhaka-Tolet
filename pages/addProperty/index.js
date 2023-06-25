@@ -47,3 +47,4 @@ const addProperty = () => {
 };
 
 export default addProperty;
+
