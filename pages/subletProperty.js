@@ -3,7 +3,7 @@ import { BsFillTagsFill, BsReverseLayoutTextSidebarReverse, BsSignIntersectionFi
 
 const subletProperty = ({ districts }) => {
     
-    const handleFormSubmit = e => {
+    const handleFormSubmit = async (e) => {
         e.preventDefault();
         const district = e.target.district.value;
         const localArea = e.target.localArea.value;
@@ -29,10 +29,26 @@ const subletProperty = ({ districts }) => {
         const securityBill = e.target.securityBill.value;
     
     
+        const subletProperty = {
+          district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, extraRoom, price, priceFor, gashBill, waterBill, electricityBill, liftBill, securityBill
+        }
     
-        console.log(district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, extraRoom, price, priceFor, gashBill, waterBill, electricityBill, liftBill, securityBill);
+        console.log(subletProperty);
     
-    
+        try{
+          const res = await fetch('/api/subletPropertyServer', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(subletProperty)
+          })
+          const data = await res.json();
+          console.log(data);
+         }
+         catch(err) {
+          console.log(err);
+         }
+         finally {
+         }
     
     }
     return (

@@ -3,7 +3,7 @@ import { BsFillTagsFill, BsReverseLayoutTextSidebarReverse, BsSignIntersectionFi
 
 const hostelProperty = ({ districts }) => {
 
-    const handleFormSubmit = e => {
+    const handleFormSubmit = async (e) => {
         e.preventDefault();
         const district = e.target.district.value;
         const localArea = e.target.localArea.value;
@@ -29,10 +29,27 @@ const hostelProperty = ({ districts }) => {
         const securityBill = e.target.securityBill.value;
     
     
+
+        const hostelProperty = {
+          district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, extraRoom, price, priceFor, gashBill, waterBill, electricityBill, liftBill, securityBill
+        }
     
-        console.log(district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, extraRoom, price, priceFor, gashBill, waterBill, electricityBill, liftBill, securityBill);
+        console.log(hostelProperty);
     
-    
+        try{
+          const res = await fetch('/api/hostelPropertyServer', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(hostelProperty)
+          })
+          const data = await res.json();
+          console.log(data);
+         }
+         catch(err) {
+          console.log(err);
+         }
+         finally {
+         }
     
     }
 
