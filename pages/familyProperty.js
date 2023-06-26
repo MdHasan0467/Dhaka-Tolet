@@ -19,7 +19,7 @@ const handleFormSubmit = async (e) => {
     const bedRoom = e.target.bedRoom.value;
     const bathRoom = e.target.bathRoom.value;
     const balcony = e.target.balcony.value;
-    const extraRoom = e.target.extraRoom.value;
+    const file = e.target.files;
 
     
     const price = e.target.price.value;
@@ -32,27 +32,30 @@ const handleFormSubmit = async (e) => {
 
 
 
-    
-    const familyProperties = {
-      district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, extraRoom, price, priceFor
-    }
-    
-    console.log(familyProperties);
+    console.log(file);
 
-    try{
-      const res = await fetch('/api/familyPropertyServer', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(familyProperties)
-      })
-      const data = await res.json();
-      console.log(data);
-     }
-     catch(err) {
-      console.log(err);
-     }
-     finally {
-     }
+
+    
+    // const familyProperties = {
+    //   district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, image, price, priceFor
+    // }
+    
+    // console.log(familyProperties);
+
+    // try{
+    //   const res = await fetch('/api/familyPropertyServer', {
+    //       method: 'POST',
+    //       headers: { 'Content-Type': 'application/json' },
+    //       body: JSON.stringify(familyProperties)
+    //   })
+    //   const data = await res.json();
+    //   console.log(data);
+    //  }
+    //  catch(err) {
+    //   console.log(err);
+    //  }
+    //  finally {
+    //  }
 
 
 }
@@ -150,7 +153,7 @@ const handleFormSubmit = async (e) => {
 
           <input type="number" name="balcony" placeholder="Balcony" className="input focus:outline-none input-bordered input-primary w-full max-w-xs" />
 
-          <input type="number" name="extraRoom" placeholder="Others Room" className="input focus:outline-none input-bordered input-primary w-full max-w-xs" />
+          <input type="file" placeholder="Others Room" className="input focus:outline-none input-bordered input-primary w-full max-w-xs" />
 
         </div>
 
