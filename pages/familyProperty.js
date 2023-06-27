@@ -36,26 +36,26 @@ const handleFormSubmit = async (e) => {
 
 
     
-    // const familyProperties = {
-    //   district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, image, price, priceFor
-    // }
+    const familyProperties = {
+      district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, file, price, priceFor
+    }
     
-    // console.log(familyProperties);
+    console.log(familyProperties);
 
-    // try{
-    //   const res = await fetch('/api/familyPropertyServer', {
-    //       method: 'POST',
-    //       headers: { 'Content-Type': 'application/json' },
-    //       body: JSON.stringify(familyProperties)
-    //   })
-    //   const data = await res.json();
-    //   console.log(data);
-    //  }
-    //  catch(err) {
-    //   console.log(err);
-    //  }
-    //  finally {
-    //  }
+    try{
+      const res = await fetch('/api/familyPropertyServer', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(familyProperties)
+      })
+      const data = await res.json();
+      console.log(data);
+     }
+     catch(err) {
+      console.log(err);
+     }
+     finally {
+     }
 
 
 }
