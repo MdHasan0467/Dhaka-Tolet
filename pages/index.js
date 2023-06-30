@@ -13,7 +13,7 @@ export default function Home({ familyProperties, bachelorProperties, hostelPrope
       <Head>
         <link
           rel="icon"
-          href="https://i.pinimg.com/736x/0d/cf/b5/0dcfb548989afdf22afff75e2a46a508.jpg"
+          href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1m30CtcVbVnrNvkQHaTkhp-PX8AfmQJ_geunLB4ihtE5IwybGguPrQALKgLDaOZeCvIw&usqp=CAU"
           sizes="any"
         />
         <title>Home Page</title>
