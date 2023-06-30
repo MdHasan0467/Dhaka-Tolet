@@ -70,6 +70,7 @@ const handleFormSubmit = async (e) => {
             <BiCurrentLocation className="mt-1 mx-2" />
             <p> Location information</p>
           </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
 
           <select name="district" className="select select-primary w-full focus:outline-none max-w-xs">
@@ -139,6 +140,7 @@ const handleFormSubmit = async (e) => {
               <option>November</option>
               <option>December</option>
           </select>
+
           <select name="propertyType" className="select select-primary w-full focus:outline-none max-w-xs">
             <option disabled selected>
               Property Type?
@@ -164,6 +166,7 @@ const handleFormSubmit = async (e) => {
             <BsFillTagsFill className="mt-1 mx-2" />
             <p> Price</p>
           </div>
+          
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
 
 
@@ -225,6 +228,7 @@ export async function getServerSideProps() {
     "https://barikoi.xyz/v1/api/NDc1NTpHSUo4NEdWTzc1/districts"
   );
   const districts = await res.json();
+  console.log(districts);
 
   return { props: { districts } };
 }
