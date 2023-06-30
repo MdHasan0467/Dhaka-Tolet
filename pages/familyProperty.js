@@ -1,9 +1,11 @@
+import ImageComponent from "@/components/ImageComponent";
+import { useState } from "react";
 import { BiCurrentLocation } from "react-icons/bi";
 import { BsFillTagsFill, BsReverseLayoutTextSidebarReverse, BsSignIntersectionFill } from "react-icons/bs";
 
 const familyProperty = ({ districts }) => {
 //   console.log(districts.places);
-
+const [images, setImages] = useState()
 
 const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +21,6 @@ const handleFormSubmit = async (e) => {
     const bedRoom = e.target.bedRoom.value;
     const bathRoom = e.target.bathRoom.value;
     const balcony = e.target.balcony.value;
-    const file = e.target.files;
 
     
     const price = e.target.price.value;
@@ -33,12 +34,12 @@ const handleFormSubmit = async (e) => {
 
 
 
-    console.log(file);
+    console.log(images);
 
 
     
     const familyProperties = {
-      district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, file, price, priceFor
+      district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, images, price, priceFor
     }
     
     console.log(familyProperties);
@@ -154,7 +155,7 @@ const handleFormSubmit = async (e) => {
 
           <input type="number" name="balcony" placeholder="Balcony" className="input focus:outline-none input-bordered input-primary w-full max-w-xs" />
 
-          <input type="file" placeholder="Others Room" className="input focus:outline-none input-bordered input-primary w-full max-w-xs" />
+          <ImageComponent setImages={setImages} />
 
         </div>
 
@@ -212,6 +213,7 @@ const handleFormSubmit = async (e) => {
 
         <button className="btn bg-sky-400 hover:bg-sky-500 mt-5">Submit</button>
       </form>
+      
     </div>
   );
 };

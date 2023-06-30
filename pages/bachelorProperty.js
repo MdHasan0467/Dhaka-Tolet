@@ -1,7 +1,11 @@
+import ImageComponent from "@/components/ImageComponent";
+import { useState } from "react";
 import { BiCurrentLocation } from "react-icons/bi";
 import { BsFillTagsFill, BsReverseLayoutTextSidebarReverse, BsSignIntersectionFill } from "react-icons/bs";
 
 const bachelorProperty = ({ districts }) => {
+
+  const [images, setImages] = useState()
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
@@ -17,7 +21,6 @@ const bachelorProperty = ({ districts }) => {
         const bedRoom = e.target.bedRoom.value;
         const bathRoom = e.target.bathRoom.value;
         const balcony = e.target.balcony.value;
-        const extraRoom = e.target.extraRoom.value;
     
         
         const price = e.target.price.value;
@@ -31,7 +34,7 @@ const bachelorProperty = ({ districts }) => {
     
 
         const bachelorProperty = {
-          district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, extraRoom, price, priceFor
+          district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, images, price, priceFor
         }
     
         console.log(bachelorProperty);
@@ -145,7 +148,7 @@ const bachelorProperty = ({ districts }) => {
 
           <input type="number" name="balcony" placeholder="Balcony" className="input focus:outline-none input-bordered input-primary w-full max-w-xs" />
 
-          <input type="number" name="extraRoom" placeholder="Others Room" className="input focus:outline-none input-bordered input-primary w-full max-w-xs" />
+          <ImageComponent setImages={setImages} />
 
         </div>
 
