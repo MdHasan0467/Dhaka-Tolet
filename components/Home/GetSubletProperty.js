@@ -12,7 +12,11 @@ const GetSubletProperty = ({subletProperties}) => {
                  <article
                 className="rounded-lg border border-gray-100 bg-white p-4 shadow-sm transition hover:shadow-lg sm:p-6"
                 >
-                <span className="inline-block rounded bg-blue-600 p-2 text-white">
+                {
+                    data.images ?
+                    <img src={data.images} alt="" />
+                    :
+                    <span className="inline-block rounded bg-blue-600 p-2 text-white">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -32,6 +36,7 @@ const GetSubletProperty = ({subletProperties}) => {
                     />
                     </svg>
                 </span>
+                }
 
                 <a href="#">
                     <h3 className="mt-0.5 text-lg font-medium text-gray-900">
