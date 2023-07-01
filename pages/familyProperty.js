@@ -33,6 +33,10 @@ const handleFormSubmit = async (e) => {
 
 
 
+    const securityBill = 'family_property';
+
+
+
 
     console.log(images);
 
