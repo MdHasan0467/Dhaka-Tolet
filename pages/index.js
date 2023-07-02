@@ -5,6 +5,7 @@ import GetHostelProperty from "@/components/Home/GetHostelProperty";
 import GetOfficeProperty from "@/components/Home/GetOfficeProperty";
 import GetShopProperty from "@/components/Home/GetShopProperty";
 import GetSubletProperty from "@/components/Home/GetSubletProperty";
+import SortingProperty from "@/components/Home/SortingProperty";
 import Head from "next/head";
 
 export default function Home({ familyProperties, bachelorProperties, hostelProperties, subletProperties, officeProperties, shopProperties }) {
@@ -22,6 +23,7 @@ export default function Home({ familyProperties, bachelorProperties, hostelPrope
 
       {/* ----Body---- */}
       <Banner />
+      <SortingProperty />
       <GetFamilyProperties familyProperties={familyProperties} />
       <GetBachelorProperty bachelorProperties={bachelorProperties} />
       <GetHostelProperty hostelProperties={hostelProperties} />

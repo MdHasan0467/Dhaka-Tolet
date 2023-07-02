@@ -34,7 +34,7 @@ const bachelorProperty = ({ districts }) => {
     
 
         const bachelorProperty = {
-          district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, images, price, priceFor
+          district, localArea, sectorNumber, roadNumber, houseNumber, houseName, propertyAvailableFrom, bedRoom, bathRoom, balcony, images, price, priceFor, authorEmail: 'ornilhasan@gmail.com',authorName: 'Ornil Hasan',
         }
     
         console.log(bachelorProperty);

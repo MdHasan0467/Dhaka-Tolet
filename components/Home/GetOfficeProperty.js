@@ -4,7 +4,7 @@ const GetOfficeProperty = ({officeProperties}) => {
     console.log(officeProperties);
     return (
         <div>
-            <h1 className="text-2xl font-semibold">Office Properties</h1>
+            <h1 className="text-2xl font-semibold my-3 text-blue-600">Office Properties</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6'>
            {
             officeProperties?.map((data, idx) => 

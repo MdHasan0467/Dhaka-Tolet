@@ -4,7 +4,7 @@ const GetSubletProperty = ({subletProperties}) => {
     console.log(subletProperties);
     return (
         <div>
-            <h1 className="text-2xl font-semibold">Sublet Properties</h1>
+            <h1 className="text-2xl font-semibold my-3 text-blue-600">Sublet Properties</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6'>
            {
             subletProperties?.map((data, idx) => 
