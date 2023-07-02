@@ -1,3 +1,4 @@
+import Banner from "@/components/Home/Banner";
 import GetBachelorProperty from "@/components/Home/GetBachelorProperty";
 import GetFamilyProperties from "@/components/Home/GetFamilyProperties";
 import GetHostelProperty from "@/components/Home/GetHostelProperty";
@@ -20,7 +21,7 @@ export default function Home({ familyProperties, bachelorProperties, hostelPrope
       </Head>
 
       {/* ----Body---- */}
-      {/* <h1 className="flex justify-center">Home Page</h1> */}
+      <Banner />
       <GetFamilyProperties familyProperties={familyProperties} />
       <GetBachelorProperty bachelorProperties={bachelorProperties} />
       <GetHostelProperty hostelProperties={hostelProperties} />

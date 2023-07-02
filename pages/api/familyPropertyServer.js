@@ -8,6 +8,7 @@ const familyPropertyServer = async (req, res) => {
     // const familyPropertyCollection = db.collection("AllProperties");
     
 
+
         if (req.method === "GET") {
         const data = await familyPropertyCollection.find().toArray();
         res.send(data);
