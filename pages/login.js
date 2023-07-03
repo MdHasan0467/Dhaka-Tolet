@@ -13,9 +13,9 @@ const login = () => {
     const handleButtonHover = () => {
       if (!isInputFilled) {
         setIsButtonHovered(true);
-        setTimeout(() => {
-          setIsButtonHovered(false);
-        }, 1000);
+        // setTimeout(() => {
+        //   setIsButtonHovered(false);
+        // }, 1000);
       }
     };
   
@@ -23,7 +23,7 @@ const login = () => {
         <div>
         <input type="text" onChange={handleInputChange} placeholder="Enter value" />
         <button
-          className={isButtonHovered ? 'animate-spin ' : ''}
+          className={isButtonHovered ? 'ml-20 bg-blue-600' : ''}
           onMouseEnter={handleButtonHover}
           onMouseLeave={() => setIsButtonHovered(false)}
         >

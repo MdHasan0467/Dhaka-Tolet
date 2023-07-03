@@ -15,7 +15,7 @@ export default function Home({ familyProperties, bachelorProperties, hostelPrope
       <Head>
         <link
           rel="icon"
-          href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1m30CtcVbVnrNvkQHaTkhp-PX8AfmQJ_geunLB4ihtE5IwybGguPrQALKgLDaOZeCvIw&usqp=CAU"
+          href="https://i.ibb.co/GxGTrQz/dhaka-Tolet-removebg-preview.png"
           sizes="any"
         />
         <title>Home Page</title>

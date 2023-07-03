@@ -18,7 +18,16 @@ const Navbar = () => {
       </ul>
     </div>
 
-    <a className="text-xl">Dhaka Tolet</a>
+    <div className="text-xl flex">
+      <img className="w-12 h-12 mx-3 mt-1" src="https://i.ibb.co/N7dvq64/TD-logo-removebg-preview.png" alt="" />
+      <div>
+      <p className="font-semibold text-2xl">Dhaka Tolet</p>
+      <p className="text-sm text-transparent bg-gradient-to-tr bg-clip-text from-blue-500 via-pink-500 to-red-500 dark:from-sky-300 dark:via-pink-300 dark:to-red-500">
+        House Rent Solution
+      </p>
+
+      </div>
+      </div>
   </div>
 
   <div className="navbar-center hidden lg:flex">
